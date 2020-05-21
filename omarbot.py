@@ -16,6 +16,10 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
+    
+    if random.randint(0,10) == 10:
+        await message.add_reaction('\U0001F4B2')
+
     if 'omar' in message.content:
         emoji = client.get_emoji(456653084064481283)
         await message.add_reaction(emoji)
