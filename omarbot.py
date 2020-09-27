@@ -29,4 +29,7 @@ async def on_message(message):
             emoji = client.get_emoji(456653084064481283)    #emoji id here
             await message.add_reaction(emoji)
 
-client.run('NjY0MjQwMDE1MDkzNjYxNzE4.Xp1D4g.jzyNX2S3VuQ8EKaHsrA5ym5z7P8')
+
+token = open("token.txt", "r")
+
+client.run(token.read())
